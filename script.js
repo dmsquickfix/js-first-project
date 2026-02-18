@@ -7,7 +7,7 @@ function increase() {
   document.getElementById("count").innerText = count;
 }
 
-function Decrease() {
+function decrease() {
   count = count - 1;
   document.getElementById("count").innerText = count;
 }
