@@ -1,5 +1,5 @@
 // Counter
-let count = 25;
+let count = 0;
 
 function increase() {
   count = count + 1;
