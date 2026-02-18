@@ -6,10 +6,13 @@ window.onload = function () {
   document.getElementById("count").innerText = count;
 };
 function increase() {
-  count = count + 100;
+  count += 100;
   document.getElementById("count").innerText = count;
+
   if (count >= 500) {
-    document.body.style.backgroundColor = "lightgreen";
+    document.body.style.backgroundColor = "#90EE90";
+  } else {
+    document.body.style.backgroundColor = "white";
   }
 }
 function decrease() {
