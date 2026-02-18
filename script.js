@@ -1,3 +1,4 @@
+console.log("Script loaded!");
 // Counter
 let count = 100;
 
