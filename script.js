@@ -8,10 +8,10 @@ function increase() {
 }
 
 function decrease() {
+  alert("Decrease function is running!");
   count = count - 1;
   document.getElementById("count").innerText = count;
 }
-
 function resetCount() {
   count = 0;
   document.getElementById("count").innerText = count;
