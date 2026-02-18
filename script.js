@@ -6,6 +6,11 @@ function increase() {
   document.getElementById("count").innerText = count;
 }
 
+function decrease() {
+  count = count - 1;
+  document.getElementById("count").innerText = count;
+}
+
 function resetCount() {
   count = 0;
   document.getElementById("count").innerText = count;
