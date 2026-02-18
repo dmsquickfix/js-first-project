@@ -1,40 +1,48 @@
-// Counter
-let count = 100;
-document.getElementById("count").innerText = count;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First JavaScript Project</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+    }
 
-function increase() {
-  count = count + 100;
-  document.getElementById("count").innerText = count;
-}
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
 
-function decrease() {
-  alert("Decrease function is running!");
-  count = count - 1;
-  document.getElementById("count").innerText = count;
-}
-function resetCount() {
-  count = 0;
-  document.getElementById("count").innerText = count;
-}
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
 
-// Task List
-function addTask() {
-  let input = document.getElementById("taskInput");
-  let taskText = input.value;
+  <h1>My JavaScript Practice</h1>
 
-  if (taskText === "") {
-    alert("Please enter a task!");
-    return;
-  }
+  <h2>Click Counter</h2>
+  <p id="count">0</p>
 
-  let li = document.createElement("li");
-  li.innerText = taskText;
+  <button onclick="increase()">Increase</button>
+  <button onclick="decrease()">Decrease</button>
+  <button onclick="resetCount()">Reset</button>
 
-  li.onclick = function() {
-    li.style.textDecoration = "line-through";
-  };
+  <hr>
 
-  document.getElementById("taskList").appendChild(li);
+  <h2>Simple Task List</h2>
 
-  input.value = "";
-}
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
