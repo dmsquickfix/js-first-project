@@ -26,7 +26,6 @@ function resetCount() {
   document.body.style.backgroundColor = "white";
 }
 
-
 // Task List
 function addTask() {
   let input = document.getElementById("taskInput");
