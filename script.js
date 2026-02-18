@@ -1,8 +1,8 @@
 // Counter
-let count = 25;
+let count = 0;
 
 function increase() {
-  count = count + 1;
+  count = count + 2;
   document.getElementById("count").innerText = count;
 }
 
