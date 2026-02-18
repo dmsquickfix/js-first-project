@@ -2,7 +2,7 @@
 let count = 0;
 
 function increase() {
-  count = count + 2;
+  count = count + 1;
   document.getElementById("count").innerText = count;
 }
 
