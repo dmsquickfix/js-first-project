@@ -1,48 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My First JavaScript Project</title>
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      margin-top: 40px;
-      transition: background-color 0.3s ease;
-    }
+// Counter
+let count = 100;
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin: 5px;
-      cursor: pointer;
-    }
+// When page loads, display starting number
+window.onload = function () {
+  document.getElementById("count").innerText = count;
+};
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-  </style>
-</head>
-<body>
+function increase() {
+  count = count + 100;
+  document.getElementById("count").innerText = count;
 
-  <h1>My JavaScript Practice</h1>
+  if (count >= 500) {
+    document.body.style.backgroundColor = "lightgreen";
+  }
+}
 
-  <h2>Click Counter</h2>
-  <p id="count">0</p>
+function decrease() {
+  count = count - 1;
+  document.getElementById("count").innerText = count;
+}
 
-  <button onclick="increase()">Increase</button>
-  <button onclick="decrease()">Decrease</button>
-  <button onclick="resetCount()">Reset</button>
+function resetCount() {
+  count = 100;
+  document.getElementById("count").innerText = count;
+  document.body.style.backgroundColor = "white";
+}
 
-  <hr>
 
-  <h2>Simple Task List</h2>
+// Task List
+function addTask() {
+  let input = document.getElementById("taskInput");
+  let taskText = input.value;
 
-  <input type="text" id="taskInput" placeholder="Enter a task">
-  <button onclick="addTask()">Add Task</button>
+  if (taskText === "") {
+    alert("Please enter a task!");
+    return;
+  }
 
-  <ul id="taskList"></ul>
+  let li = document.createElement("li");
+  li.innerText = taskText;
 
-  <script src="script.js"></script>
-</body>
-</html>
+  // Click task to cross it out
+  li.onclick = function () {
+    li.style.textDecoration = "line-through";
+  };
+
+  document.getElementById("taskList").appendChild(li);
+
+  input.value = "";
+}
